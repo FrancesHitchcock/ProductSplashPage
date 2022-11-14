@@ -1,0 +1,185 @@
+
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: #404040;
+}
+
+.hero{
+    /* apply background colour and image in single line */
+    background: #ff4800 url("images/veg.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.scrim,
+.main,
+.img-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scrim{
+    background: rgba(50, 50, 50, .6);
+    justify-content: space-between;
+    min-height: 250px;
+    text-align: center;
+    height: 100%;
+    padding: 0 2em 1.5em 2em;
+}
+
+.main{
+    padding: 2.5em 2em 0 2em;
+    text-align: center;
+}
+
+.img-container{
+    width: 120px;
+    height: 120px;
+    background-color: #eaeaea;
+    border-radius: 50%;
+    padding-bottom: 1em;
+}
+
+.logo{
+    width: 80%;
+}
+
+.info,
+form{
+    max-width: 450px;
+}
+
+/* typography */
+h1{
+    font-weight: 400;
+    font-size: 2.5rem;
+    text-shadow: 0 1px 2px black;
+}
+
+h2{
+    font-size: 2.25rem;
+    margin: .167em 0;
+}
+
+p{
+    font-size: 1.125rem;
+    line-height: 1.35;
+    text-align: left;
+}
+
+.top-text{
+    font-size: .875rem;
+    font-weight: 900;
+    padding-top: .25em;
+    border-top: 5px solid;
+    order: -1;
+    margin: 0;
+}
+
+.waveney-text{
+    font-weight: 900;
+}
+
+.waveney-text,
+.subheading,
+.btn,
+.top-text{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.subheading{
+    font-weight: 900;
+    color: #ff4800;
+    margin-bottom: .5em;
+}
+
+.small-print{
+    font-size: .75rem;
+    letter-spacing: 1px;
+    color: #858585;
+}
+
+/* form */
+
+input,
+button{
+    font-family: inherit;
+    width: 100%;
+    border-radius: 5px;
+}
+
+input{
+    margin-bottom: .8em;
+    padding: .5em;
+    border: 2px solid #bbb;
+}
+
+input:focus{
+    border: 2px solid #ff4800;
+    background-color: #eaeaea;
+    outline: none;
+}
+
+.btn{
+    font-weight: 700;
+    padding: 1em;
+    border: none;
+}
+
+/* .btn-primary is known as a modifier class which is reserved for details of individual buttons. It modifies the button and .btn selectors. */
+.btn-primary{
+    color: #fff;
+    background-color: #ff7900;
+    margin-top: 1em;
+}
+
+.btn-primary:hover,
+.btn-primary:focus{
+    background-color: #ff6000;
+    cursor: pointer;
+}
+
+@media(min-width: 576px){
+    body{
+        display: flex;
+    }
+
+    /* the following code gives each item equal width and allows them to grow proportionally. It is a shortened form of flex: 1, 50%; We could also do width: 50% in this case. */
+    .hero,
+    .main{
+        flex: 1;
+    }
+
+    /* this code ensures both elements stretch to the full height of the viewport without leaving an unsightly gap at the bottom. */
+    .hero{
+        min-height: 100vh;
+    }
+
+    .main{
+        justify-content: center;
+        padding-top: 0;
+    }
+
+    h1{
+        font-size: 5vw;
+    }
+
+    h2{
+        font-size: 2.625rem;
+    }
+
+    .waveney-text{
+        font-size: 1.25rem;
+    }
+}
